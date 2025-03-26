@@ -113,7 +113,7 @@ ol {
 .result__video-container {
   position: relative;
   width: 711px;
-  height: 400px;
+  height: 386px;
   margin-bottom: 16px;
 }
 
@@ -121,6 +121,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -162,7 +163,6 @@ ol {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0;
-  color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border: 0;
   border-top: 1px solid #fff;
@@ -181,6 +181,10 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+}
+
+.search-form__checkbox {
+  appearance: none;
 }
 
 .search-form__pseudo-checkbox {
@@ -223,7 +227,6 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  overflow: hidden;
   grid-area: content__details;
 }
 
@@ -243,8 +246,8 @@ ol {
 .content__list-container {
   position: relative;
   height: 298px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
+  padding: 2px;
 }
 
 .content__list {
@@ -252,10 +255,6 @@ ol {
   flex-direction: column;
   gap: 30px;
   padding-bottom: 30px;
-}
-
-.content__list-item {
-  padding: 1px 3px;
 }
 
 .content__card-link {
@@ -332,6 +331,11 @@ ol {
 }
 
 .more-button {
-  margin: 3px;
   width: 100%;
 }
+
+/* 
+убрала лишние отступы и overflow у контейнеров
+поправила высоту видео в соответствии с макетом
+убрала серый цвет текста с формы
+*/
